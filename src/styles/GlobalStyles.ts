@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   :root {
-      // Obs.:
+    --color-title: #2F4F4F;
+    
   }
 `;
