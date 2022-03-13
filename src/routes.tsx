@@ -9,7 +9,7 @@ import Private from './pages/Private';
 const Routers: React.FC = () => {
   return (
       <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={<RequireAuth><Home /></RequireAuth>}/>
           <Route path="/private" element={<RequireAuth><Private/></RequireAuth>}/>
       </Routes>
   );

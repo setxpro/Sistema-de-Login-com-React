@@ -7,6 +7,11 @@ const api = axios.create({
 
 export const useApi = () => ({
     validateToken: async (token: string) => {
+
+        return {
+            user: { id: 1, name: 'Patrick', email: 'patrick@mail.com' }
+        }; // FAKE
+
         const response = await api.post('/validate', token);
         return response.data;
     },
@@ -14,12 +19,15 @@ export const useApi = () => ({
         return {
             user: { id: 1, name: 'Patrick', email: 'patrick@mail.com' },
             token: '15614856484'
-        };
+        };  // FAKE
         
         const response = await api.post('/signin', {email, password}); // http://api.ggg.com'/signin'
         return response.data;
     },
-    logout: async () => {
+    sinout: async () => {
+
+        return { status: true } // FAKE
+
         const response = await api.post('/logout'); // http://api.ggg.com'/logout'
         return response.data;
     }
